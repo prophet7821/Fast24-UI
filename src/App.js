@@ -5,6 +5,7 @@ import BookingCar from './pages/BookingCar';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import 'antd/dist/antd.css';
 
 const App = () => {
   return (
