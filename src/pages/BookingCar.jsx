@@ -136,7 +136,7 @@ const BookingCar = ({ match }) => {
                 token={onToken}
                 amount={totalAmount * 100}
                 stripeKey="pk_test_51LJhJ7SCfwlvAQMZfP44IaY1cAsVKLRkhXmCydPxjfEcZXamLSoawiWGlwL3qvJcxYuQ4yhE98FVQUYafGrfvQ5F00NV03LOwB"
-                currency="USD"
+                currency="INR"
               >
                 <button className="btn1">Book Now</button>
               </StripeCheckout>

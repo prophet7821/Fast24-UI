@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Dropdown, Menu, Row, Col } from "antd";
-
+import {Link} from 'react-router-dom';
 const DefaultLayout = (props) => {
   const user = JSON.parse(localStorage.getItem("user"));
 
@@ -9,18 +9,14 @@ const DefaultLayout = (props) => {
       items={[
         {
           key: "1",
-          label: <a href="https://www.antgroup.com">Home</a>,
+          label: <Link to='/'>Home</Link>,
         },
         {
           key: "2",
-          label: <a href="https://www.aliyun.com">Profile</a>,
+          label: <Link to='/userbookings'>Bookings</Link>,
         },
         {
           key: "3",
-          label: <a href="https://www.luohanacademy.com">Bookings</a>,
-        },
-        {
-          key: "4",
           label: (
             <div
               onClick={() => {
@@ -42,7 +38,7 @@ const DefaultLayout = (props) => {
         <Row gutter={16} justify="center">
           <Col lg={20} sm={24} xs={24}>
             <div className="d-flex justify-content-between">
-              <h1>Sam Cars</h1>
+              <h1><b><Link to='/' style={{color:'orangered'}}>Fast 24</Link></b></h1>
               <Dropdown overlay={menu} placement="bottom">
                 <Button>{user.username}</Button>
               </Dropdown>
