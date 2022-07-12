@@ -4,7 +4,7 @@ export const bookCar = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-    await axios.post("http://localhost:5000/api/bookings/bookcar", reqObj);
+    await axios.post("https://passport-fast-24.herokuapp.com/api/bookings/bookcar", reqObj);
     dispatch({ type: "LOADING", payload: false });
     message.success("Your car booked sucessfully");
     setTimeout(() => {
@@ -23,7 +23,7 @@ export const getAllBookings = () => async (dispatch) => {
 
   try {
     const response = await axios.get(
-      "http://localhost:5000/api/bookings/getAllBookings"
+      "https://passport-fast-24.herokuapp.com/api/bookings/getAllBookings"
     );
     dispatch({ type: "GET_ALL_BOOKINGS", payload: response.data });
     dispatch({ type: "LOADING", payload: false });

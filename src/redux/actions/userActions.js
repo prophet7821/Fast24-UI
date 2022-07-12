@@ -6,7 +6,7 @@ export const userLogin = (reqObj) => async (dispatch) => {
 
   try {
     const response = await axios.post(
-      "http://localhost:5000/api/users/login",
+      "https://passport-fast-24.herokuapp.com/api/users/login",
       reqObj
     );
     localStorage.setItem("user", JSON.stringify(response.data));
@@ -26,8 +26,8 @@ export const userRegister = (reqObj) => async (dispatch) => {
   dispatch({ type: "LOADING", payload: true });
 
   try {
-    const response = await axios.post(
-      "http://localhost:5000/api/users/register",
+    await axios.post(
+      "https://passport-fast-24.herokuapp.com/api/users/register",
       reqObj
     );
     message.success("Registration successful");
